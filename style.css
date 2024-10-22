@@ -50,6 +50,10 @@ html, body {
     font-weight: 600;   
 }
 
+#nav h5 {
+    display: none;
+}
+
 #nav-part-2 h4 span {
     color: rgb(98, 98, 98);
     margin-left: 25px;
@@ -65,7 +69,7 @@ html, body {
     padding: 0 50px;
 }
 
-#nav-3 h3 {
+#nav-2 h3 {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600
@@ -104,7 +108,8 @@ html, body {
 }
 
 .text h1 {
-    font-size: 130px;
+    /* font-size: 130px; */
+    font-size: 7vw;
     font-weight: 300;
 
 }
@@ -117,8 +122,7 @@ html, body {
 }
 
 #image-content::-webkit-scrollbar{
-    background-color: transparent;
-    height: 0;
+    display: none;
 }
 
 #image-content img {
@@ -126,4 +130,131 @@ html, body {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: 0 30%;
 }
+
+ @media (max-width:600px) {
+
+    #nav {
+        height: 70px;
+        padding: 0px 25px;
+    }
+
+    #nav-part-1 {
+        gap: 0px;
+    }
+
+    .circle {
+        height: 16px;
+        width: 16px;
+        background-color: black;
+        border-radius: 50%;
+    }
+    
+    #nav-part-2 {
+        align-items: center;
+        gap: 30px;
+    }
+    #nav-part-2 h4 {
+        font-size: 15px;
+        display: none;
+        font-weight: 600;   
+    }
+
+    #nav-part-2 h4:nth-child(1) {
+        display: initial;
+        margin-right: 25px;
+    }
+    
+    #nav-part-2 h4 span {
+        color: rgb(98, 98, 98);
+        margin-left: 10px;
+    }
+
+    #nav h5 {
+        display: initial;
+    }
+
+    #nav h5 i {
+        font-size: 20px;
+    }
+
+    #nav-2 {
+        height: 70px;
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0 25px;
+    }
+    
+    #nav-2 h3 {
+        font-size: 2.5vw;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #6a6a6a;
+    }
+
+    #content {
+        height: calc(100% - 140px);
+        width: 100%;
+        /* background-color: aquamarine; */
+    }
+    #text-content {
+        height: 40%;
+        width: 100%;
+        /* background-color: burlywood; */
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    #text-content::-webkit-scrollbar{
+        background-color: transparent;
+        height: 3px;
+    }
+    
+    #text-content::-webkit-scrollbar-thumb {
+        background-color: orangered;
+    }
+    
+    .text {
+        flex-shrink: 0;
+        height: 100%;
+        width: fit-content;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 60px;
+        margin-inline-start: 50px;
+    }
+    
+    .text h1 {
+        /* font-size: 130px; */
+        font-size: 13.5vw;
+        font-weight: 300;
+    
+    }
+    
+    #image-content {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    #image-content::-webkit-scrollbar{
+        display: none;
+    }
+    
+    #image-content img {
+        flex-shrink: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+ }
