@@ -239,7 +239,7 @@ html, body {
     }
     
     #image-content {
-        height: 60%;
+        height: 65%;
         width: 100%;
         display: flex;
         overflow-x: auto;
